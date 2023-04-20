@@ -28,11 +28,27 @@
     border-radius: 8px;
 }
 
-/* .search li {
-    list-style: none;
-    font-weight: 500;
-    background-color: rgb(200, 200, 200);
-    padding: 8px;
-    border-radius: 8px;
-    margin: 8px;
-} */
+.search button:hover {
+    cursor: pointer;
+}
+
+
+.bodyParts_categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.bodyParts {
+    padding: 8px 10px;
+}
+
+@media screen and (max-width: 1170px) {
+    .bodyParts_categories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

@@ -14,7 +14,7 @@ function App() {
         <Navbar />  
       </div>
       <div>
-        <Search setExercises={setExercises}/>
+        <Search setExercises={setExercises} setBodyPart={setBodyPart}/>
       </div>
       {/* <Result /> */}
     </div>
