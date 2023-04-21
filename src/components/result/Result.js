@@ -1,27 +1,23 @@
 import React from 'react';
+import ExerciseCard from './exerciseCard';
 import './Result.css';
 
-function Result({searchedExercises, bodyPart}) {
+function Result({ searchedExercises, bodyPartExercises }) {
+  const exerciseCount = searchedExercises.length || bodyPartExercises.length;
+
   return (
     <div className='searchResults'>
-      <h1>{searchedExercises.length} Results</h1>
+      <h1>{exerciseCount} Results</h1>
       <div className='exercisesList'>
-          {searchedExercises.map((exercise) => (
-            <div 
-                key={exercise.id}
-                name={exercise.name}
-                className='exercise_card'
-            >
-    
-                <img src={exercise.gifUrl} alt={exercise.name} />   
-                <h3>{exercise.name}</h3>
-                <div className='exercise_attribute'>
-                    <p>{exercise.target}</p>
-                    <p>{exercise.equipment}</p>
-                    <p>{exercise.bodyPart}</p>
-              </div>
-            </div>
-          ))}
+        {searchedExercises.length > 0 ? 
+          (searchedExercises.map((exercise) => (
+            <ExerciseCard key={exercise.id} exercise={exercise} />
+          ))
+          ) : (bodyPartExercises.map((exercise) => (
+            <ExerciseCard key={exercise.id} exercise={exercise} />
+          ))
+        )
+        }
       </div>
     </div>
   )

@@ -6,12 +6,21 @@ import { BODYPARTSDATA } from "../Data/bodyPartsData";
 const bodyPartsDATA = BODYPARTSDATA;
 const exerciseDATA = EXERCISEDATA;
 
-function Search( { setExercises, setBodyPart } ) {
+function Search( { setExercises, setBodyPartExercises } ) {
 
-  const [search, setSearch] = useState('leg');
-  // const [bodyParts, setBodyParts] = useState(['all']);
+  const [search, setSearch] = useState('');
+  const [bodyPart, setBodyPart] = useState();
+
+  const handleClick = (item) => {
+    setExercises('');
+    setBodyPart(item);
+    const clickExercises = exerciseDATA.filter((exercise) => exercise.bodyPart.toLowerCase().includes(bodyPart))
+
+    setBodyPartExercises(clickExercises);
+    // console.log(clickExercises);
+  }
+
   const handleSearch = () => {
-    
     if (search) {
       const searchedExercises = exerciseDATA.filter((exercise) => exercise.bodyPart.toLowerCase().includes(search)
       || exercise.equipment.toLowerCase().includes(search)
@@ -19,7 +28,7 @@ function Search( { setExercises, setBodyPart } ) {
       || exercise.target.toLowerCase().includes(search)
       );
 
-      // setSearch('');
+      setSearch('');
       setExercises(searchedExercises);
       // console.log(searchedExercises);
     }
@@ -30,7 +39,7 @@ function Search( { setExercises, setBodyPart } ) {
       <div className='search_bar'>
         <input 
           type='text'
-          placeholder='Search: exercises, body-parts, or equipments'
+          placeholder='Search: exercises, body-part, or equipments'
           value={search}
           onChange = {(e) => setSearch(e.target.value.toLocaleLowerCase())}
           />
@@ -38,7 +47,7 @@ function Search( { setExercises, setBodyPart } ) {
       </div>
       <div className='bodyParts_categories'>
         {bodyPartsDATA.map((item) => (
-          <li key={item} className='bodyParts' onClick={() => setBodyPart(item)} >{item}</li>
+          <li key={item} value={item} className='bodyParts' onClick={() => handleClick(item)} >{item}</li>
         )
         )}
       </div>
