@@ -23,12 +23,12 @@
     border-radius: 8px;
 }
 
-.search button {
+.search_button {
     padding: 8px 10px;
     border-radius: 8px;
 }
 
-.search button:hover {
+.search_button:hover {
     cursor: pointer;
 }
 
@@ -42,7 +42,21 @@
 
 .bodyParts {
     padding: 8px 10px;
+    font-weight: 500;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: 8px;
 }
+
+.bodyParts:hover {
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
+}
+
+/* .bodyParts:active {
+    background-color: rgb(200, 200, 200);
+} */
+
 
 @media screen and (max-width: 1170px) {
     .bodyParts_categories {

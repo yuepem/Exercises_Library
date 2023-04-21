@@ -2,21 +2,15 @@ import React from 'react';
 import ExerciseCard from './exerciseCard';
 import './Result.css';
 
-function Result({ searchedExercises, bodyPartExercises }) {
-  const exerciseCount = searchedExercises.length || bodyPartExercises.length;
+function Result({ searchedExercises, setExercises }) {
 
   return (
     <div className='searchResults'>
-      <h1>{exerciseCount} Results</h1>
+      <h1>{searchedExercises.length} Results</h1>
       <div className='exercisesList'>
-        {searchedExercises.length > 0 ? 
-          (searchedExercises.map((exercise) => (
-            <ExerciseCard key={exercise.id} exercise={exercise} />
+        {searchedExercises.map((exercise) => (
+            <ExerciseCard key={exercise.id} exercise={exercise} setExercises={setExercises}/>
           ))
-          ) : (bodyPartExercises.map((exercise) => (
-            <ExerciseCard key={exercise.id} exercise={exercise} />
-          ))
-        )
         }
       </div>
     </div>
