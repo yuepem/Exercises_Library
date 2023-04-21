@@ -3,9 +3,8 @@
     flex-direction: row;
     justify-content: flex-start;
     background-color: rgb(208, 208, 208);
-    width: 80%;
+    width: 100%;
     margin: auto;
-    
     max-width: 1440px;
     min-width: 500px;
 }

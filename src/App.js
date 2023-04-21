@@ -1,6 +1,7 @@
 import React,{ useState} from 'react';
 import Navbar from './components/navbar/Navbar';
 import Search from './components/search/Search';
+import Result from './components/result/Result';
 import "./App.css";
 
 function App() {
@@ -10,13 +11,9 @@ function App() {
 
   return (
     <div className='app'>
-      <div>
-        <Navbar />  
-      </div>
-      <div>
-        <Search setExercises={setExercises} setBodyPart={setBodyPart}/>
-      </div>
-      {/* <Result /> */}
+      <Navbar />  
+      <Search setExercises={setExercises} setBodyPart={setBodyPart}/>
+      <Result searchedExercises={exercises} bodyPart={bodyPart} />
     </div>
   )
 }

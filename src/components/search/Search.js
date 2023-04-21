@@ -1,23 +1,15 @@
 import React, { useState} from 'react';
 import './Search.css';
-
-// import { apiOptions, fetchData } from '../../apiRequest/FetchData';
-
 import { EXERCISEDATA } from "../Data/exerciseData";
 import { BODYPARTSDATA } from "../Data/bodyPartsData";
 
 const bodyPartsDATA = BODYPARTSDATA;
 const exerciseDATA = EXERCISEDATA;
 
-
 function Search( { setExercises, setBodyPart } ) {
 
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('leg');
   // const [bodyParts, setBodyParts] = useState(['all']);
-
-  
-
-
   const handleSearch = () => {
     
     if (search) {
@@ -27,12 +19,11 @@ function Search( { setExercises, setBodyPart } ) {
       || exercise.target.toLowerCase().includes(search)
       );
 
-      setSearch('');
+      // setSearch('');
       setExercises(searchedExercises);
       // console.log(searchedExercises);
     }
     }
-  
 
   return (
     <div className='search'>

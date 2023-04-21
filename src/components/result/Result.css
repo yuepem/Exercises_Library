@@ -1,0 +1,56 @@
+.searchResults {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 500px;
+    margin: 20px auto;
+}
+
+.exercisesList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.searchResults h1 {
+    margin-left: 50px;
+}
+
+.exercise_card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 15px;
+}
+.exercise_card h3 {
+    text-align: center;
+}
+.exercise_card img {
+    border-radius: 10px;;
+}
+
+.exercise_attribute {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: aqua; */
+}
+
+.exercise_attribute p {
+    list-style: none;
+    font-weight: 500;
+    background-color: rgb(220, 220, 220);
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin:3px;
+}
+
+@media screen and (max-width: 1000px) {
+    .exercise_card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .exercise_card {
+        width: 90%;
+    }
+}
