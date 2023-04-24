@@ -49,6 +49,7 @@
     border-radius: 8px;
     margin: 8px;
     text-transform: capitalize;
+    border: none;
 }
 
 .bodyParts:hover {

@@ -41,7 +41,6 @@ function Result({ searchedExercises, setExercises }) {
                 size='large'
                 // showFirstButton
                 // showLastButton
-                
               />
             )
           }

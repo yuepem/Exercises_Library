@@ -31,7 +31,7 @@
 .exercise_card h3 {
     /* text-align: center; */
     text-transform: capitalize;
-    margin-left: 30px;
+    margin-left: 25px;
 }
 .exercise_card img {
     border-radius: 10px;;
@@ -62,6 +62,7 @@
 .pageNavigation {
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
 
 
