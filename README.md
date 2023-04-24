@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+##Gym Exercises Library Web App
+The Gym Exercises Library Web App is a single-page web application built with React, React-Router, useState hooks, and Material UI. The application is designed to help fitness enthusiasts discover different exercises and equipment corresponding to different body parts and muscles. This is a ongoing project...
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###Technologies Used
+*React
+*React-Router
+*useState hooks
+*Material UI
 
-## Available Scripts
+###Features
+*Displays a list of gym equipment and exercises
+*Provides corresponding GIFs for each exercise
+*Allows users to search exercises by body part, equipment, target muscle, or exercise type
+*Allows users to filter exercises by body part, equipment or target muscle
+*Responsive design for seamless use on mobile and desktop devices
+[ ]Provides detailed information on how to perform each exercise
+[ ]Show similar exercises of an exercise user chosen
 
-In the project directory, you can run:
+###Getting Started
+To run this application on your local machine, you will need to have Node.js installed. Once you have Node.js installed, follow the steps below:
 
-### `npm start`
+1. Clone this repository to your local machine.
+2. Open the terminal and navigate to the project directory.
+3. Run `npm install`, `npm install @mui/material`, `npm i react-router-dom` to install the project dependencies.
+4. Run `npm start` to start the development server.
+5. Open your browser and navigate to http://localhost:3000/ to view the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###How It Works
+The Gym Exercises Library Web App is built using the React framework, which provides a modular and scalable approach to building web applications. The application uses React-Router to manage client-side routing and navigation, allowing users to easily filter exercises based on body part or muscle. The useState hooks are used to manage the state of the application, enabling the application to render different components based on user interactions. The Material UI library is used to provide a responsive and visually appealing user interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###Conclusion
+The Gym Exercises Library Web App is a comprehensive resource for fitness enthusiasts to discover different exercises and equipment corresponding to different body parts and muscles. The application provides detailed information and accompanying GIFs for each exercise, making it a valuable tool for anyone looking to improve their fitness. Also it is very helpful for beginners in the gym to start fitness quickly.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
