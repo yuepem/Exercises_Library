@@ -43,7 +43,7 @@ function Search({ setExercises }) {
           value={search}
           onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())}
         />
-        <button className='search_button' onClick={handleSearch} >Search</button>
+        <button className='search_button' onClick={handleSearch} >go</button>
       </div>
       <div className='bodyParts_categories'>
         {bodyPartsDATA.map((item) => (

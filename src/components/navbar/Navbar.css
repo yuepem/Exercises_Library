@@ -9,7 +9,7 @@
     min-width: 500px;
 }
 
-li {
+.nav_list {
     list-style: none;
     font-weight: 500;
     background-color: rgb(200, 200, 200);
