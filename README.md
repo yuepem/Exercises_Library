@@ -1,6 +1,9 @@
 ## Gym Exercises Library Web App
 The Gym Exercises Library Web App is a single-page web application built with React, React-Router, useState hooks, and Material UI. The application is designed to help fitness enthusiasts discover different exercises and equipment corresponding to different body parts and muscles. This is a ongoing project...
 
+### Home Page
+![Home Page](./public/image/homePage.png)
+
 ### Technologies Used
 * React
 * React-Router
@@ -13,8 +16,8 @@ The Gym Exercises Library Web App is a single-page web application built with Re
 * Allows users to search exercises by body part, equipment, target muscle, or exercise type
 * Allows users to filter exercises by body part, equipment or target muscle
 * Responsive design for seamless use on mobile and desktop devices
-[ ] Provides detailed information on how to perform each exercise
-[ ] Show similar exercises of an exercise user chosen
+- [ ] Provides detailed information on how to perform each exercise
+- [ ] Show similar exercises of an exercise user chosen
 
 ### Getting Started
 To run this application on your local machine, you will need to have Node.js installed. Once you have Node.js installed, follow the steps below:

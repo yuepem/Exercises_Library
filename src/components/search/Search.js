@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import './Search.css';
 import { EXERCISEDATA } from "../Data/exerciseData";
 import { BODYPARTSDATA } from "../Data/bodyPartsData";
@@ -17,7 +17,6 @@ function Search({ setExercises }) {
     const clickExercises = exerciseDATA.filter((exercise) => exercise.bodyPart.toLowerCase().includes(item))
 
     setExercises(clickExercises);
-    // console.log(clickExercises);
   }
 
   const handleSearch = () => {

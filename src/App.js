@@ -9,6 +9,7 @@ import "./App.css";
 function App() {
 
   const exerciseDATA = EXERCISEDATA;
+  // const [search, setSearch] = useState('');
 
   const [exercises, setExercises] = useState(exerciseDATA);
   // const [bodyPartExercises, setBodyPartExercises] = useState([]);
@@ -16,8 +17,8 @@ function App() {
   return (
     <div className='app'>
       <Navbar />
-      <Search setExercises={setExercises}  />
-      <Result searchedExercises={exercises} setExercises={setExercises}/>
+      <Search setExercises={setExercises}   />
+      <Result searchedExercises={exercises} setExercises={setExercises} />
     </div>
   )
 }

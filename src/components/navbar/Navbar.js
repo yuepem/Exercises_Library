@@ -6,7 +6,7 @@ function Navbar() {
     <div className='navbar'>
         <li className='nav_list'>Home</li>
         <li className='nav_list'>Search</li>
-        <li className='nav_list'>Result</li>
+        <li className='nav_list'>About</li>
     </div>
   )
 }
