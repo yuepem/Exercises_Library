@@ -41,6 +41,6 @@
   display: flex;
   flex-direction: column;
   /* margin: 10px auto; */
-  background-color: rgb(231, 227, 227);
+  /* background-color: rgb(231, 227, 227); */
   gap: 10px;
 }

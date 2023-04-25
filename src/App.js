@@ -1,24 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
-import Search from './components/search/Search';
-import Result from './components/result/Result';
-import { EXERCISEDATA } from './components/Data/exerciseData';
-
+import Home from './pages/Home';
+import About from './pages/About';
 import "./App.css";
 
 function App() {
 
-  const exerciseDATA = EXERCISEDATA;
-  // const [search, setSearch] = useState('');
-
-  const [exercises, setExercises] = useState(exerciseDATA);
-  // const [bodyPartExercises, setBodyPartExercises] = useState([]);
-
   return (
     <div className='app'>
-      <Navbar />
-      <Search setExercises={setExercises}   />
-      <Result searchedExercises={exercises} setExercises={setExercises} />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </Router>
     </div>
   )
 }
