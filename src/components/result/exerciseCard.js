@@ -1,29 +1,29 @@
 import React from 'react';
 import { EXERCISEDATA } from "../Data/exerciseData";
 
-function ExerciseCard({ exercise, setExercises }) {
+function ExerciseCard({ exercise, setExercises,setCurrentPage }) {
 
     const exerciseDATA = EXERCISEDATA;
+    
+    const filterExercises = (filterFn) => {
+        const filteredExercises = exerciseDATA.filter(filterFn);
+        
+        setExercises(filteredExercises);
+        setCurrentPage(1);
+        window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
 
     const handleTarget = (item) => {
-        const exercise_target = exerciseDATA.filter((exercise) => exercise.target.toLowerCase().includes(item));
-
-        setExercises(exercise_target);
-        window.scrollTo({ top: 200, behavior: 'smooth' });
+        filterExercises((exercise) => exercise.target.toLowerCase().includes(item))
     };
 
     const handleEquipment = (item) => {
-        const exercise_equipment = exerciseDATA.filter((exercise) => exercise.equipment.toLowerCase().includes(item));
-
-        setExercises(exercise_equipment);
-        window.scrollTo({ top: 200, behavior: 'smooth' });
+        filterExercises((exercise) => exercise.equipment.toLowerCase().includes(item))
+        
     };
 
     const handleBodyPart = (item) => {
-        const exercise_bodyPart = exerciseDATA.filter((exercise) => exercise.bodyPart.toLowerCase().includes(item));
-
-        setExercises(exercise_bodyPart);
-        window.scrollTo({ top: 200, behavior: 'smooth' });
+        filterExercises((exercise) => exercise.bodyPart.toLowerCase().includes(item));
     };
 
 

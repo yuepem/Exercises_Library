@@ -14,7 +14,6 @@ function Result({ searchedExercises, setExercises }) {
 
   const handlePageChange = (e, value) => {
     setCurrentPage(value);
-
     window.scrollTo({top: 200, behavior: "smooth"})
   }
 
@@ -23,7 +22,7 @@ function Result({ searchedExercises, setExercises }) {
       <h1>{searchedExercises.length} Results</h1>
       <div className='exercisesList'>
         {currentExercises.map((exercise) => (
-            <ExerciseCard key={exercise.id} exercise={exercise} setExercises={setExercises}/>
+            <ExerciseCard key={exercise.id} exercise={exercise} setExercises={setExercises} setCurrentPage={setCurrentPage}/>
           ))
         }
       </div>
@@ -33,14 +32,15 @@ function Result({ searchedExercises, setExercises }) {
               <Pagination 
                 color="standard"
                 shape="rounded"
-                
                 defaultPage={1}
                 count={Math.ceil(searchedExercises.length / exercisesPerPage)}
                 page={currentPage}
                 onChange={handlePageChange}
                 size='large'
-                // showFirstButton
-                // showLastButton
+                showFirstButton
+                showLastButton
+                hidePrevButton
+                hideNextButton
               />
             )
           }
