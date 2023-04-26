@@ -19,6 +19,12 @@ function Search({ setExercises }) {
     setExercises(clickExercises);
   }
 
+  const handlePress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  }
+
   const handleSearch = () => {
     if (search) {
       const searchedExercises = exerciseDATA.filter((exercise) => exercise.bodyPart.toLowerCase().includes(search)
@@ -41,6 +47,7 @@ function Search({ setExercises }) {
           placeholder='Search: exercises, body-part, or equipments'
           value={search}
           onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())}
+          onKeyDown={handlePress}
         />
         <button className='search_button' onClick={handleSearch} >go</button>
       </div>

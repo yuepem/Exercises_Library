@@ -43,4 +43,9 @@
   /* margin: 10px auto; */
   /* background-color: rgb(231, 227, 227); */
   gap: 10px;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
 }

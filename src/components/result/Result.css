@@ -70,11 +70,21 @@
 @media screen and (max-width: 1000px) {
     .exercise_card {
         width: 45%;
+        margin-bottom: 15px;
+    }
+    
+    .exercise_attribute p {
+        margin: 3px 5px 10px 0;
     }
 }
 
 @media screen and (max-width: 600px) {
     .exercise_card {
         width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .exercise_attribute p {
+        margin: 3px 5px 10px 0;
     }
 }
