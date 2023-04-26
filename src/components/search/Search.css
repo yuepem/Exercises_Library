@@ -6,7 +6,7 @@
     width: 100%;
     margin:  auto;
     max-width: 1440px;
-    min-width: 500px;
+    min-width: 350px;
 }
 
 .search_bar {
@@ -22,12 +22,14 @@
     padding: 8px 10px;
     border-radius: 8px;
     font-size: 14px;
+    border: none;
 }
 
 .search_button {
     padding: 8px 10px;
     border-radius: 8px;
     font-size: 14px;
+    border: none;
 }
 
 .search_button:hover {
@@ -50,6 +52,7 @@
     margin: 8px;
     text-transform: capitalize;
     border: none;
+    color: black;
 }
 
 .bodyParts:hover {

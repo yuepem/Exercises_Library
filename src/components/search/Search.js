@@ -47,7 +47,7 @@ function Search({ setExercises }) {
           placeholder='Search: exercises, body-part, or equipments'
           value={search}
           onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())}
-          onKeyDown={handlePress}
+          onKeyUp={handlePress}
         />
         <button className='search_button' onClick={handleSearch} >go</button>
       </div>
